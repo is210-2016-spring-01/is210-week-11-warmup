@@ -6,8 +6,6 @@ import time
 
 
 class Snapshot(object):
-
-
     """This class produces a Unix Timestamp.
     Attributes: None
     """
