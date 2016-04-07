@@ -5,12 +5,14 @@
 import time
 
 class Snapshot(object):
+
+    
     """This class produces a Unix Timestamp.
 
     Attributes: None
     """
 
-    def __init__ (self):
+    def __init__(self):
         """A constructor for the class Snapshot
 
         Arguments:
@@ -21,5 +23,3 @@ class Snapshot(object):
         """
 
         self.created = time.time()
-
-
