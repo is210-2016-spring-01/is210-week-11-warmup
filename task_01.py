@@ -1,16 +1,13 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""Starter data module to access classes"""
+"""Data module to access classes"""
 
 import produce
 
-class Produce(object):
-    """A produce class"""
+TOMATO = produce.Produce()
 
-    def __init__(self, TOMATO, EGGPLANT=1311210802):
-        """This class analyzes produce."""
-        self.TOMATO = TOMATO_ARRIVAL
+EGGPLANT = produce.Produce(1311210802)
 
-    def get_expiration(self):
-        """This class  shows the expiration date."""
-        self.EGGPLANT = EGGPLANT_EXPIRES
+TOMATO_ARRIVAL = TOMATO.arrival
+
+EGGPLANT_EXPIRES = EGGPLANT.get_expiration()
