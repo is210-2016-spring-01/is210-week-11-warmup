@@ -12,5 +12,4 @@ class Apple(produce.Produce):
     Attribute:
         duration(int): Duration for apple production
     """
-    
     duration = 5356800
