@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""This modlue uses subclasses to demonstrate the has-a and is -a concepts."""
+"""This module uses subclasses to demonstrate the has-a and is -a concepts."""
 
 import car
 
@@ -22,7 +22,7 @@ class Custom(car.Car):
         4
         """
 
-    car.Car __init__(self, color):
+    car.Car.__init__(self, color)
     self.tires = tires
     if self.tires is None:
         self.tires = []
