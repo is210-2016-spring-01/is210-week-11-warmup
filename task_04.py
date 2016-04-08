@@ -18,15 +18,14 @@ class CustomTire(car.Tire):
         None.
     """
 
-    def __init__(self, miles=0, tires = 4):
-        """The class creator for CustomTire.
-
-    def __init__(self, color = None, tires = None, cars = 1):
-        """This class shows how to custom build cars.
+    def __init__(self, cars = 1, miles=0, tires = 4, color = None,):
+        """The class creator for CustomCar.
 
         Args:
             color (string): color of car
             cars( int): Cars to be created. Default = 1
+            tires(list): list of CustomTire objects (equal to 4)
+            miles(int): distance cars travel
 
         Attributes:
             tires(list): list of CustomTire objects (equal to 4)
@@ -37,9 +36,6 @@ class CustomTire(car.Tire):
                 self.tires.append(CustomTire(i-i))
     else:
         self.tires = tires
-
-
-
 
         Args:
             miles(int): The number of miles on tire. Default is 0.
