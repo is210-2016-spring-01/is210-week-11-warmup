@@ -5,36 +5,51 @@
 import car
 
 
-class Custom(car.Car):
-    """Another version of the car class."""
+class CustomCar(car.Car):
+    """Another version of the car class.
 
-    def __init__(self, color='blue', tires=None):
-        """This class shows how to custom build cars.
-        Arguments:
-            tires(int): The number of tires used on the car
-        Attributes:
-            None
-        Returns:
-            tires(list): The number of tires on the car
-        Examples:
-        >>> mycar = CustomCar()
-        >>> len(mycar.tires)
-        4
-        """
-
-    car.Car.__init__(self, color)
-    self.tires = tires
-    if self.tires is None:
-        self.tires = []
-        while len(self.tires)<4:
-            self.tires.append(CustomTire())
-
-
-class  CustomTire(car.Tire):
-    """Tire strength
-    Arguments:
-        max_miles(int): The maximum number of miles for which the tire functions.
     Attributes:
-        None
+        None.
     """
-    _maximum_miles = 500
+    
+    def __init__(self, color=None, tires=None):
+        """This class shows how to custom build cars.
+
+        Args:
+            color(string): color of car (for the new car).
+            tires(list): List of the CustomTire objects (equal to 4)
+
+        Attributes:
+            tires(list): list of CustomTire objects (equal to 4)
+        """
+        new(CustomCar, self).__init__color
+
+        if tires is None:
+
+            self.tires = []
+            for i in xrange(4):
+
+                self.tires.append(CustomTire(i-i))
+        else:
+            self.tires = tires
+
+
+class CustomTire(car.Tire):
+    """A subclass of Tire for CustomTire
+
+    Attributes:
+        None.
+    """
+
+    def __init__(self, miles=0):
+        """The class creator for CustomTire.
+
+        Args:
+            miles (int): The number of miles on tire. Default is 0.
+
+        Attributes:
+            miles(int): The number of miles on the tire.
+        """
+        new(CustomTire, self).__init__(miles)
+
+        self.__maximum_miles = 500
