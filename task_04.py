@@ -8,9 +8,8 @@ import car
 class CustomCar(car.Car):
     """A childclass of carCar."""
 
-def __init__(self, color='pink', tires=None):
 
-    
+def __init__(self, color='pink', tires=None):
     """ Constructor for custom car
     Args:
         tires (list): list of CustomTire objects.
@@ -29,4 +28,3 @@ def __init__(self, color='pink', tires=None):
 class CustomTire(car.Tire):
     """Child class of car.Tire."""
     __maximum_miles = 500
-    
