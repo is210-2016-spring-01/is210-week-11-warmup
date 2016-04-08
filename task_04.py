@@ -11,29 +11,6 @@ class CustomCar(car.Car):
     Attributes:
         None.
     """
-    
-    def __init__(self, color=None, tires=None):
-        """This class shows how to custom build cars.
-
-        Args:
-            color(string): color of car (for the new car).
-            tires(list): List of the CustomTire objects (equal to 4)
-
-        Attributes:
-            tires(list): list of CustomTire objects (equal to 4)
-        """
-        new(CustomCar, self).__init__color
-
-        if tires is None:
-
-            self.tires = []
-            for i in xrange(4):
-
-                self.tires.append(CustomTire(i-i))
-        else:
-            self.tires = tires
-
-
 class CustomTire(car.Tire):
     """A subclass of Tire for CustomTire
 
@@ -41,15 +18,34 @@ class CustomTire(car.Tire):
         None.
     """
 
-    def __init__(self, miles=0):
+    def __init__(self, miles=0, tires = 4):
         """The class creator for CustomTire.
 
+    def __init__(self, color = None, tires = None, cars = 1):
+        """This class shows how to custom build cars.
+
         Args:
-            miles (int): The number of miles on tire. Default is 0.
+            color (string): color of car
+            cars( int): Cars to be created. Default = 1
+
+        Attributes:
+            tires(list): list of CustomTire objects (equal to 4)
+        """
+    if tires is None:
+        self.tires = []
+    for i in xrange(4):
+                self.tires.append(CustomTire(i-i))
+    else:
+        self.tires = tires
+
+
+
+
+        Args:
+            miles(int): The number of miles on tire. Default is 0.
+            tires(int): The number of tires on the car
 
         Attributes:
             miles(int): The number of miles on the tire.
         """
-        new(CustomTire, self).__init__(miles)
-
         self.__maximum_miles = 500
