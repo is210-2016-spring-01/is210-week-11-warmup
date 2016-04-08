@@ -22,7 +22,5 @@ class CustomCar(car.Car):
 
 class CustomTire(car.Tire):
     """a child class of car.Tire"""
-    def __init__(self, miles=0):
-        """constructor"""
-        self.__maximum_miles = 500
+        __maximum_miles = 500
 
