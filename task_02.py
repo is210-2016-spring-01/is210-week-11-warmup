@@ -16,7 +16,7 @@ class Snapshot(object):
         created (numeric): The current Unix timestamp
     """
 
-    def created(self):
+    def __init__(self):
         """Returns the current timestamp.
 
         Returns:
