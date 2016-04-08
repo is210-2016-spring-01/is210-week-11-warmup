@@ -29,4 +29,4 @@ class Snapshot(object):
             >>> stamp.created()
             1459807619.273144
         """
-        return time.time()
+        self.created = time.time()
