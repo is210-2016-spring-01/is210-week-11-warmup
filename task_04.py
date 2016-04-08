@@ -1,8 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""This module uses subclasses to demonstrate the has-a and is -a concepts."""
+"""This module demonstrates the has-a and is -a concepts."""
 
 import car
+
 
 class CustomCar(car.Car):
     """A type of the car class"""
@@ -10,35 +11,20 @@ class CustomCar(car.Car):
     def __init__(self, color='blue', tires=None):
         """A creator of the CustomCar class
 
-        Arguments:
+        Args:
             tires(int): The number of tires used on the car
 
         Attributes:
-            None
-
-        Returns
-           tires(lists): The number of tires on the car.
-        Example:
-            >>>mycar=CustomCar()
-            >>>len(mycar.tires)
-            4
+            tires: If none will append up to 8.
         """
-
-    car.Car.__init__(self, color)
-    self.tires = tires
-    if self.tires is None:
-        self.tires = []
-        while len(self.tires) < 4:
-            self.tires.append(CustomTire())
-
+        car.Car.__init__(self, color)
+        if tires is None:
+            tires = []
+            while len(tires) < 8:
+                tires.append(CustomTire())
+        self.tires = tires
 
 
 class CustomTire(car.Tire):
-    """Tire Strength
-
-        Arguments:
-            miles(int): Number of miles the tires will work
-        Attributes:
-            None
-       """
-__maximum_miles = 500
+    """Child class of car.Tire."""
+    __maximum_miles = 500
