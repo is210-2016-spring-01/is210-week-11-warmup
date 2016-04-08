@@ -4,27 +4,41 @@
 
 import car
 
-
 class CustomCar(car.Car):
-    """A childclass of carCar."""
+    """A type of the car class"""
 
+    def __init__(self, color='blue', tires=None):
+        """A creator of the CustomCar class
 
-def __init__(self, color='pink', tires=None):
-    """ Constructor for custom car
-    Args:
-        tires (list): list of CustomTire objects.
-    Attributes:
-        tires: if none will append up to 8
-    """
+        Arguments:
+            tires(int): The number of tires used on the car
+
+        Attributes:
+            None
+
+        Returns
+           tires(lists): The number of tires on the car.
+        Example:
+            >>>mycar=CustomCar()
+            >>>len(mycar.tires)
+            4
+        """
+
     car.Car.__init__(self, color)
-
-    if tires is None:
-        tires = []
-        while len(tires) < 4:
-            tires.append(CustomTire())
     self.tires = tires
+    if self.tires is None:
+        self.tires = []
+        while len(self.tires) < 4:
+            self.tires.append(CustomTire())
+
 
 
 class CustomTire(car.Tire):
-    """Child class of car.Tire."""
-    __maximum_miles = 500
+    """Tire Strength
+
+        Arguments:
+            miles(int): Number of miles the tires will work
+        Attributes:
+            None
+       """
+__maximum_miles = 500
