@@ -15,12 +15,12 @@ class CustomCar(car.Car):
             tires(int): The number of tires used on the car
 
         Attributes:
-            tires: If none will append up to 8.
+            tires: If none will append up to 4.
         """
         car.Car.__init__(self, color)
         if tires is None:
             tires = []
-            while len(tires) < 8:
+            while len(tires) < 4:
                 tires.append(CustomTire())
         self.tires = tires
 
