@@ -5,6 +5,7 @@
 
 import car
 
+
 class CustomCar(car.Car):
     """a child class of car.Car"""
     def __init__(self, color=None, tires=None):
@@ -18,9 +19,8 @@ class CustomCar(car.Car):
             self.tires = []
             while len(self.tires) < 4:
                 self.tires.append(CustomTire())
-                
+
 
 class CustomTire(car.Tire):
     """a child class of car.Tire"""
     __maximum_miles = 500
-

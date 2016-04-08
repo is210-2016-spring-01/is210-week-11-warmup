@@ -5,6 +5,7 @@
 
 import produce
 
+
 class Apple(produce.Produce):
     """update class attribute"""
     duration = 5356800
