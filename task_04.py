@@ -9,11 +9,11 @@ class CustomCar(car.Car):
     """A childclass of carCar."""
 
 def __init__(self, color='pink', tires=None):
-    """ Constructor for custom car
+
     
+    """ Constructor for custom car
     Args:
         tires (list): list of CustomTire objects.
-
     Attributes:
         tires: if none will append up to 8
     """
@@ -22,7 +22,7 @@ def __init__(self, color='pink', tires=None):
     if tires is None:
         tires = []
         while len(tires) < 4:
-            Tires.append(CustomTire())
+            tires.append(CustomTire())
     self.tires = tires
 
 
