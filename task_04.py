@@ -7,11 +7,11 @@ import car
 
 class CustomCar(car.Car):
     """a child class of car.Car"""
-    def __init__(self, color, tires=None):
+    def __init__(self, color=None, tires=None):
         """constructor. argument/attribute: tires.
         returns a list of car tires."""
         self.tires = tires
-        car.Car.__init__(self, tires)
+        car.Car.__init__(self, color)
         self.tires = tires
         # tires = CustomTire()
         if self.tires is None:
