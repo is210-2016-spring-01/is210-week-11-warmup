@@ -22,5 +22,5 @@ class CustomCar(car.Car):
 
 class CustomTire(car.Tire):
     """a child class of car.Tire"""
-        __maximum_miles = 500
+    __maximum_miles = 500
 
