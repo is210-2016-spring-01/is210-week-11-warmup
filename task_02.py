@@ -4,12 +4,13 @@
 
 import time
 
+
 class Snapshot(object):
     """Returns timestamp (Unix)
-    
+
     Attributes: None
     """
-    
+
     def __init__(self):
         """What creates the Class Snapshot
         Arguments:

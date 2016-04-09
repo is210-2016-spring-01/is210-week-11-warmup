@@ -10,7 +10,7 @@ class CustomCar(car.Car):
 
     def __init__(self, color='slate', tires=None):
         """A constructor of the CustomCar class
-        
+
         Arguments:
             tires(int): How many tires?
         Attributes:
@@ -33,7 +33,7 @@ class CustomCar(car.Car):
 
 class CustomTire(car.Tire):
     """Tire strength
-    
+
     Arguments:
         miles(int): Number of miles the tires can withstand
     Attributes:
