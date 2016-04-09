@@ -24,7 +24,6 @@ class CustomCar(car.Car):
         """
 
         car.Car.__init__(self, color)
-        self.color = 'pink'
         self.tires = tires
         if self.tires is None:
             self.tires = []
