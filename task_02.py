@@ -18,7 +18,7 @@ class Snapshot(object):
         created (numeric): The Unix timestamp when run.
     """
 
-    def created(self):
+    def __init__(self):
         """Returns the current timestamp.
 
         Returns:
@@ -30,4 +30,4 @@ class Snapshot(object):
             >>> stamp.created()
             1459807619.273144
         """
-        return time.time()
+        self.created = time.time()
